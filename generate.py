@@ -13,8 +13,14 @@ def password(length):
     password = "".join(random.choice(all_chars)for i in range(length))
     return password
 
-print('Password: ', password(length))
+passi = password(length)
 
+print('Password: ', passi)
 
+manager = passi + " "
+
+file = open("manager.txt", "a")
+file.write(manager)
+file.close()
     
 input('Press Enter')
